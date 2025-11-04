@@ -21,7 +21,7 @@ version: 1.0.0+1
 environment:
   sdk: ^3.7.2
 
-# Dependencies specify other packages that your package needs in order to work.
+# Dependencies specify other packages that your packages needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
 # dependencies can be manually updated by changing the version numbers below to
@@ -39,6 +39,7 @@ dependencies:
   excel: ^4.0.0
   path_provider: ^2.1.2
   permission_handler: ^11.3.0
+  share_plus: ^10.0.0
 
 dev_dependencies:
   flutter_test:

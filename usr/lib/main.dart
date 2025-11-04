@@ -59,7 +59,6 @@ class _HomePageState extends State<HomePage> {
     if (!storageStatus.isGranted) {
       setState(() {
         _statusMessage = 'يجب منح إذن التخزين';
-        _statusMessage = 'يجب منح إذن التخزين';
       });
       return;
     }
@@ -109,7 +108,7 @@ class _HomePageState extends State<HomePage> {
       for (int i = 0; i < lines.length; i++) {
         List<String> cells = lines[i].split(RegExp(r'\s+'));
         for (int j = 0; j < cells.length; j++) {
-          sheetObject.cell(CellIndex.indexByColumnRow(columnIndex: j, rowIndex: i)).value = cells[j];
+          sheetObject.cell(CellIndex.indexByColumnRow(columnIndex: j, rowIndex: i)).value = TextCellValue(cells[j]);
         }
       }
 
@@ -169,7 +168,8 @@ class _HomePageState extends State<HomePage> {
                   label: const Text('الكاميرا'),
                 ),
               ],
-            ),n            if (_image != null) ...[
+            ),
+            if (_image != null) ...[
               const SizedBox(height: 16),
               Image.file(_image!, height: 200),
               const SizedBox(height: 16),
